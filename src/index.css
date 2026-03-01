@@ -2,3 +2,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes namePulse {
+  0% { transform: scale(1); text-shadow: 0 0 0px #3b82f6; }
+  50% { transform: scale(1.08); text-shadow: 0 0 20px #3b82f6; }
+  100% { transform: scale(1); text-shadow: 0 0 0px #3b82f6; }
+}
+
+.animate-namePulse {
+  animation: namePulse 0.6s ease;
+}
