@@ -21,3 +21,31 @@ html {
 .animate-namePulse {
   animation: namePulse 0.6s ease;
 }
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.perspective {
+  perspective: 1200px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.hover\:rotate-y-180:hover {
+  transform: rotateY(180deg);
+}
