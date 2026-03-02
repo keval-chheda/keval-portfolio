@@ -2,6 +2,7 @@ import profile from "../assets/profile.jpg";
 import profileJava from "../assets/profile-java.jpg";
 import ParticleBackground from "./ParticleBackground";
 import { TypeAnimation } from "react-type-animation";
+import CV from "/KevalChheda_CV_JAVAFullstack_5YOE.pdf";
 import { useState } from "react";
 
 export default function Hero() {
@@ -67,7 +68,7 @@ export default function Hero() {
               {/* BUTTONS */}
               <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                 <a
-                  href="/KevalChheda_JavaFullStackDeveloper.pdf"
+                  href={CV}
                   target="_blank"
                   className="px-6 py-3 rounded-lg bg-green-600 hover:bg-green-700 hover:shadow-green-500/40 hover:shadow-lg transition duration-300 font-medium"
                 >
