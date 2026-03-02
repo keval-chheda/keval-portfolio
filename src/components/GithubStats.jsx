@@ -1,3 +1,5 @@
+import FadeIn from "./FadeIn";
+
 export default function GithubStats() {
   const username = "keval-chheda";
 
@@ -8,22 +10,51 @@ export default function GithubStats() {
 
         <div className="grid md:grid-cols-2 gap-8">
           {/* stats */}
-          <div className="bg-white/5 p-4 rounded-xl border border-white/10 hover:border-blue-500/50 transition">
-            <img
-              src={`https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=${username}&show_icons=true&theme=tokyonight`}
-              alt="GitHub stats"
-              className="w-full"
-            />
-          </div>
+          <FadeIn>
+            <div
+              className="
+                    group
+                    bg-white/5
+                    p-4
+                    rounded-xl
+                    border border-white/10
+                    transition-all duration-300
+                    hover:border-blue-400
+                    hover:shadow-lg
+                    hover:shadow-blue-500/30
+                    hover:-translate-y-1
+                  "
+            >
+              <img
+                src={`https://github-readme-streak-stats.herokuapp.com/?user=${username}&theme=tokyonight`}
+                className="w-full transition duration-300 group-hover:scale-[1.02]"
+              />
+            </div>
+          </FadeIn>
 
           {/* languages */}
-          <div className="bg-white/5 p-4 rounded-xl border border-white/10 hover:border-blue-500/50 transition">
-            <img
-              src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${username}&layout=compact&theme=tokyonight&hide_border=true`}
-              alt="Top languages"
-              className="w-full"
-            />
-          </div>
+          <FadeIn>
+            <div
+              className="
+                group
+                bg-white/5
+                p-4
+                rounded-xl
+                border border-white/10
+                transition-all duration-300
+                hover:border-blue-400
+                hover:shadow-lg
+                hover:shadow-blue-500/30
+                hover:-translate-y-1
+              "
+            >
+              <img
+                src={`https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=${username}&theme=tokyonight`}
+                alt="Top languages"
+                className="w-full transition duration-300 group-hover:scale-[1.02]"
+              />
+            </div>
+          </FadeIn>
         </div>
       </div>
     </section>

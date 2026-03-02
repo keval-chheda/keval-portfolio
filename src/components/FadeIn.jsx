@@ -1,14 +1,36 @@
-import { motion } from "framer-motion";
+import { useRef, useEffect, useState } from "react";
 
 export default function FadeIn({ children }) {
+
+  const ref = useRef();
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setVisible(true);
+      },
+      { threshold: 0.2 }
+    );
+
+    observer.observe(ref.current);
+
+    return () => observer.disconnect();
+
+  }, []);
+
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      viewport={{ once: true }}
+    <div
+      ref={ref}
+      className={`transition-all duration-700 ${
+        visible
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-10"
+      }`}
     >
       {children}
-    </motion.div>
-  );    
+    </div>
+  );
+
 }
