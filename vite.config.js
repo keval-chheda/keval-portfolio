@@ -2,10 +2,19 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import sitemap from 'vite-plugin-sitemap'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
-    sitemap({ hostname: 'https://kevalchheda.com' })
+    sitemap({
+      hostname: 'https://kevalchheda.com',
+      routes: [
+        '/',
+        '/#about',
+        '/#skills',
+        '/#experience',
+        '/#projects',
+        '/#contact',
+      ]
+    })
   ],
 })

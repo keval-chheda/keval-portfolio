@@ -49,3 +49,9 @@ body {
 .hover\:rotate-y-180:hover {
   transform: rotateY(180deg);
 }
+html {
+  scroll-behavior: smooth;
+}
+section {
+  scroll-margin-top: 90px;
+}
